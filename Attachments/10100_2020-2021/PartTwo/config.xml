@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<syncConfig>
+  <googleConfig>
+    <domain>*.richmondcc.edu</domain>
+  </googleConfig>
+  <ldapConfig>
+    <useAnonymousAccess value="false" />
+    <baseDN>OU=students,DC=richmondcc,DC=local</baseDN>
+    <authorizedUsername>RICHMONDCC\ldapadmin</authorizedUsername>
+    <mailAttribute>mail</mailAttribute>
+  </ldapConfig>
+</syncConfig>

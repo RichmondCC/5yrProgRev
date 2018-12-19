@@ -1,0 +1,197 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Form Name</legend>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenAccreditation">Accreditation, Approval and Licensing</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="rccSevenAccreditation-0">
+      <input type="radio" name="rccSevenAccreditation" id="rccSevenAccreditation-0" value="0" checked="checked">
+      Not needed
+    </label>
+	</div>
+  <div class="radio">
+    <label for="rccSevenAccreditation-1">
+      <input type="radio" name="rccSevenAccreditation" id="rccSevenAccreditation-1" value="1">
+      Being considered, encouraged or mandated
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenStatus">Credential</label>
+  <div class="col-md-4">
+    <select id="rccSevenStatus" name="rccSevenStatus" class="form-control">
+      <option value="0">...</option>
+      <option value="1">Existing</option>
+      <option value="2">New</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenEntity">Accrediting or Licensing Entity</label>  
+  <div class="col-md-4">
+  <input id="rccSevenEntity" name="rccSevenEntity" type="text" placeholder="Credential/License agency" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenRenewal">Renewal Date</label>  
+  <div class="col-md-4">
+  <input id="rccSevenRenewal" name="rccSevenRenewal" type="text" placeholder="Renewal date" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenExpenses">Annual Expenses</label>  
+  <div class="col-md-4">
+  <input id="rccSevenExpenses" name="rccSevenExpenses" type="text" placeholder="Include all costs" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenFaculty">Faculty Representative</label>  
+  <div class="col-md-4">
+  <input id="rccSevenFaculty" name="rccSevenFaculty" type="text" placeholder="Who facilitates?" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenVisits">Frequency of Site Visits</label>  
+  <div class="col-md-4">
+  <input id="rccSevenVisits" name="rccSevenVisits" type="text" placeholder="How often?" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenExpendYr1">Expenditures</label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="rccSevenExpendYr1" name="rccSevenExpendYr1" class="form-control" placeholder="Major requests" type="text" required="">
+      <span class="input-group-addon">2010-2011</span>
+    </div>
+    
+  </div>
+</div>
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenExpendYr2"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="rccSevenExpendYr2" name="rccSevenExpendYr2" class="form-control" placeholder="Major requests" type="text" required="">
+      <span class="input-group-addon">2011-2012</span>
+    </div>
+    
+  </div>
+</div>
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenExpendYr3"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="rccSevenExpendYr3" name="rccSevenExpendYr3" class="form-control" placeholder="Major requests" type="text">
+      <span class="input-group-addon">2012-2013</span>
+    </div>
+    
+  </div>
+</div>
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenExpendYr4"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="rccSevenExpendYr4" name="rccSevenExpendYr4" class="form-control" placeholder="Major rrequests" type="text" required="">
+      <span class="input-group-addon">2013-2014</span>
+    </div>
+    
+  </div>
+</div>
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenExpendYr5"></label>
+  <div class="col-md-4">
+    <div class="input-group">
+      <input id="rccSevenExpendYr5" name="rccSevenExpendYr5" class="form-control" placeholder="Major requests" type="text" required="">
+      <span class="input-group-addon">2014-2015</span>
+    </div>
+    
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenNeed">Need</label>  
+  <div class="col-md-4">
+  <input id="rccSevenNeed" name="rccSevenNeed" type="text" placeholder="Need" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenCost">Costs</label>  
+  <div class="col-md-4">
+  <input id="rccSevenCost" name="rccSevenCost" type="text" placeholder="Associated costs" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenPriority">Priority</label>
+  <div class="col-md-4">
+    <select id="rccSevenPriority" name="rccSevenPriority" class="form-control">
+      <option value="0">Extra</option>
+      <option value="1">Important</option>
+      <option value="2">Required</option>
+    </select>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenBudgetYear">Budget Year</label>
+  <div class="col-md-4">
+    <select id="rccSevenBudgetYear" name="rccSevenBudgetYear" class="form-control">
+      <option value="2015-2016">2015-2016</option>
+      <option value="2016-2017">2016-2017</option>
+      <option value="2017-2018">2017-2018</option>
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="rccSevenJustification">Justification for Need</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="rccSevenJustification" name="rccSevenJustification"></textarea>
+  </div>
+</div>
+
+</fieldset>
+</form>

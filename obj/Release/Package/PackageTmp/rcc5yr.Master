@@ -1,0 +1,180 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="rcc5yr.master.cs" Inherits="Rcc5yrProgRev.rcc5yr" %>
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<form id="form1" runat="server">
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head runat="server">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="Attachments/src/css/bootstrap.css">
+        <link rel="stylesheet" href="Attachments/src/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="Attachments/src/css/main.css">
+        <style>
+            body {
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+            .add-btn {
+                margin-top: 1em;
+                padding-top: 1em;
+            }
+            .btn-pager {
+                margin: .5em 0 .5em 0;
+            }
+        </style>
+        <script src="Attachments/src/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+  <div id="rccHeader" class="container">
+    
+    <asp:ContentPlaceHolder ID="navigation" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <div id="rccIdent" class="row">
+
+      <div id="rccProgram" class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Program Name & Code</div>
+          <div class="panel-body">
+              <asp:ListView ID="ListView1" runat="server" DataSourceID="rccPrograms">
+                  <AlternatingItemTemplate>
+                  </AlternatingItemTemplate>
+                  <EditItemTemplate>
+                  </EditItemTemplate>
+                  <EmptyDataTemplate>
+                    Error! No data.
+                  </EmptyDataTemplate>
+                  <InsertItemTemplate>
+                  </InsertItemTemplate>
+                  <ItemTemplate>
+                          <div runat="server" style="">
+                              <asp:Label ID="ProgramNameLabel" runat="server" Text='<%# Eval("ProgramName") %>' />
+                              <asp:Label ID="ProgramIDLabel" runat="server" Text='<%# Eval("ProgramID") %>' />
+                          </div>
+                  </ItemTemplate>
+                  <LayoutTemplate>
+                              <div id="itemPlaceholderContainer" runat="server">
+                                  <div id="itemPlaceholder" runat="server"></div>
+                              </div>
+                  </LayoutTemplate>
+                  <SelectedItemTemplate>
+                  </SelectedItemTemplate>
+              </asp:ListView>
+              <asp:SqlDataSource ID="rccPrograms" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [ProgramName], [ProgramID] FROM [Programs] WHERE ([ProgramID] = @ProgramID)">
+                  <SelectParameters>
+                      <asp:SessionParameter Name="ProgramID" SessionField="SessProgID" Type="String" />
+                  </SelectParameters>
+              </asp:SqlDataSource>
+          </div>
+        </div>
+      </div>
+      
+      <div id="rccPeriod" class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Review Period (Fiscal years: July >> June)</div>
+          <div class="panel-body"><%: Session["SessRevYr"] %></div>
+        </div>
+      </div>
+      
+      <div id="rccLogout" class="col-sm-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">Welcome, <%: Session["SessName"] %>.</div>
+          <div class="panel-body">
+              <a class="btn btn-xs btn-info" href="Default.aspx">Change Program/Year</a>
+              <asp:Button CssClass="btn btn-xs btn-warning" ID="BtnLogout" runat="server" Text="Log out" OnClick="BtnLogout_Click" />
+            </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+    
+
+
+        <asp:ContentPlaceHolder ID="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+  <div id="rccFooter" class="container">
+
+    <!--div id="rccProgress" class="span col-sm-12">
+      
+      <div class="panel panel-default">
+        <div class="panel-heading">Overall Progress</div>
+        <div class="panel-body">
+          
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 60%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+    
+  </div-->
+
+    
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Contact DevOps</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Phone (910) 410-1822</a></li>
+          <li><a href="mailto:ragaddy@richmondcc.edu?subject=DevOps: Program Review">Email</a></li>
+          <li><a href="#">Chat (currently offline)</a></li>
+          <li><a href="#">Report a Bug (currently offline)</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="Attachments/src/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="Attachments/src/js/vendor/bootstrap.min.js"></script>
+
+        <script src="Attachments/src/js/main.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="popover"]').popover();
+            });
+        </script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l; b[l] || (b[l] =
+                function () { (b[l].q = b[l].q || []).push(arguments) }); b[l].l = +new Date;
+                e = o.createElement(i); r = o.getElementsByTagName(i)[0];
+                e.src = 'https://www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto'); ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+</form>
+
