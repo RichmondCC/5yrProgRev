@@ -702,7 +702,7 @@
                                                 </strong>
                                             </div>
                                             <div class="container col-sm-6">
-                                                <asp:TextBox CssClass="form-control" ID="DiscussYr4TextBox" runat="server" Text='<%# Bind("DiscussYr5") %>' TextMode="MultiLine" />
+                                                <asp:TextBox CssClass="form-control" ID="DiscussYr4TextBox" runat="server" Text='<%# Bind("DiscussYr4") %>' TextMode="MultiLine" />
                                             </div>
                                         </div>
                                         <div class="row">
